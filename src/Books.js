@@ -4,8 +4,8 @@ const Books = (props) => {
     const names = props.books.map( (book, i) => (
         <li 
             key = {i} 
-            onClick = {() => console.log(`Go to ${book.name} focus`)} >
-            {book.name}
+            onClick = {() => console.log(`Go to ${book.title} focus`)} >
+            {book.title}
         </li>
     ))
 
