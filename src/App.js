@@ -6,9 +6,24 @@ import Books from './Books';
 import './App.css';
 
 const books = [
-      {title: "A farewell to Arms"},
-      {title: "A short introduction to blood"},
-      {title: "Titan"}
+      {
+        title: "A farewell to Arms",
+        author: "Ernest Hemingway",
+        status: "currently-reading",
+        imgUrl: "https://99designs-blog.imgix.net/wp-content/uploads/2017/12/attachment_83090027.jpg?auto=format&q=60&fit=max&w=930"
+      },
+      {
+        title: "A short introduction to blood",
+        author: "Ernest Hemingway",
+        status: "currently-reading",
+        imgUrl: "https://about.canva.com/wp-content/uploads/sites/3/2015/01/art_bookcover.png"
+      },
+      {
+        title: "Titan",
+        author: "Ernest Hemingway",
+        status: "currently-reading",
+        imgUrl: "https://static1.squarespace.com/static/5202d1b3e4b099a0812c51a3/523753d6e4b030ffaec4a565/5a2043310d9297af42dde909/1512063793878/Dungeon-Lord.jpg"
+      }
   ]
 
 const BookShelf = () => (
