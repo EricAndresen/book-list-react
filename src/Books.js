@@ -1,25 +1,29 @@
 import React from 'react'
 
 const FabStatusChange = (props) => (
-    <button onClick = {() => console.log(props.book.title)} >Button</button>
+    <button 
+        className = "fab"
+        onClick = {() => console.log(props.book.title)} >
+        <i className="material-icons">keyboard_arrow_down</i>
+    </button>
 )
 
 const Books = (props) => {
     const names = props.books.map( (book, i) => (
-        <li 
+        <div 
             key = {i}
             className = "Books-book">
             <img height = "200px" src = {book.imgUrl} />
             <h4>{book.title}</h4>
             <h5>{book.author}</h5>
             <FabStatusChange book = {book}/>
-        </li>
+        </div>
     ))
 
     return (
-        <ul className = "Books-container">
+        <div className = "Books-container">
            {names}
-        </ul>
+        </div>
     )
 }
 

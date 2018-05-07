@@ -1,4 +1,8 @@
 // TODO migrate to typescript instead of using proptypes (build time rather than run time checks, and a little nicer with functional reactive)
+// TODO add drop down menu
+// TODO add redux
+
+// OPTIMIZE remove font CDN for material icons for lighter weight app
 
 import React, { Component } from 'react';
 import Header from './Header';
@@ -63,16 +67,16 @@ const books = [
   ]
 
 
-  const BookShelf = () => (
-  <main>
-    <h2>Currently Reading</h2>
-    {/* This filter will become by book.status */}
-    <Books books = {books.filter( book => (book.status === "currently-reading"))}/>
-    <h2>Want to Read</h2>
-    <Books books = {books.filter( book => (book.status === "want-to-read"))}/>
-    <h2>Done Reading</h2>
-    <Books books = {books.filter( book => (book.status === "done-reading"))}/>
-  </main>
+const BookShelf = () => (
+<main>
+  <h2>Currently Reading</h2>
+  {/* This filter will become by book.status */}
+  <Books books = {books.filter( book => (book.status === "currently-reading"))}/>
+  <h2>Want to Read</h2>
+  <Books books = {books.filter( book => (book.status === "want-to-read"))}/>
+  <h2>Done Reading</h2>
+  <Books books = {books.filter( book => (book.status === "done-reading"))}/>
+</main>
 )
 
 const App = () => {
