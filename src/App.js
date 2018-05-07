@@ -15,13 +15,13 @@ const books = [
       {
         title: "A short introduction to blood",
         author: "Ernest Hemingway",
-        status: "currently-reading",
+        status: "want-to-read",
         imgUrl: "https://about.canva.com/wp-content/uploads/sites/3/2015/01/art_bookcover.png"
       },
       {
         title: "Titan",
         author: "Ernest Hemingway",
-        status: "currently-reading",
+        status: "done-reading",
         imgUrl: "https://static1.squarespace.com/static/5202d1b3e4b099a0812c51a3/523753d6e4b030ffaec4a565/5a2043310d9297af42dde909/1512063793878/Dungeon-Lord.jpg"
       }
   ]
@@ -30,11 +30,11 @@ const BookShelf = () => (
   <main>
     <h2>Currently Reading</h2>
     {/* This filter will become by book.status */}
-    <Books books = {books.filter( book => (book.title === "Titan"))}/>
+    <Books books = {books.filter( book => (book.status === "currently-reading"))}/>
     <h2>Want to Read</h2>
-    <Books books = {books.filter( book => (book.title === "A farewell to Arms"))}/>
+    <Books books = {books.filter( book => (book.status === "want-to-read"))}/>
     <h2>Done Reading</h2>
-    <Books books = {books.filter( book => (book.title === "Titan"))}/>
+    <Books books = {books.filter( book => (book.status === "done-reading"))}/>
   </main>
 )
 
