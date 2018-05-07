@@ -1,14 +1,14 @@
 import React from 'react'
 
-const FabStatusChange = () => (
-    <button>Button</button>
+const FabStatusChange = (props) => (
+    <button onClick = {() => console.log(props.book.title)} >Button</button>
 )
 
 const Books = (props) => {
     const names = props.books.map( (book, i) => (
         <li 
-            key = {i} 
-            onClick = {() => console.log(`Go to ${book.title} focus`)} >
+            key = {i}
+            className = "Books-book">
             <img height = "200px" src = {book.imgUrl} />
             <h4>{book.title}</h4>
             <h5>{book.author}</h5>
