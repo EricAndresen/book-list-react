@@ -14,8 +14,18 @@ main {
   margin: auto;
 }
 
+.Books-book {
+  margin: 0 30px;
+}
+
 .Books-book > button {
   position: relative;
   bottom: 150px;
   left: 100px;
 }
+
+.Books-container {
+  display: flex;
+}
+
+

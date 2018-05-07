@@ -17,7 +17,7 @@ const Books = (props) => {
     ))
 
     return (
-        <ul>
+        <ul className = "Books-container">
            {names}
         </ul>
     )
