@@ -1,13 +1,19 @@
 import React from 'react'
 
-const books = [
-    {name: "A farewell to Arms"},
-    {name: "A short introduction to blood"},
-    {name: "Titan"}
-]
+const Books = (props) => {
+    const names = props.books.map( (book, i) => (
+        <li 
+            key = {i} 
+            onClick = {() => console.log(`Go to ${book.name} focus`)} >
+            {book.name}
+        </li>
+    ))
 
-const Books = () => (
-      <p>Booksers</p>
-)
+    return (
+        <ul>
+           {names}
+        </ul>
+    )
+}
 
 export default Books

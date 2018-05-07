@@ -3,12 +3,18 @@ import Header from './Header';
 import Books from './Books';
 import './App.css';
 
+const books = [
+      {name: "A farewell to Arms"},
+      {name: "A short introduction to blood"},
+      {name: "Titan"}
+  ]
 
 const App = () => {
-  return (
+  
+  return(
   <div>
     <Header />
-    <Books />
+    <Books books = {books}/>
   </div>
 )}
 
