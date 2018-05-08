@@ -82,7 +82,20 @@ const initialState = {
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case "UPDATE_BOOK":
-      console.log(action.index)
+      // this will have to change if there is anything but books in the stor
+      return {
+        books: state.books.map( book => {
+          if (book.index !== action.index) {
+            return book
+          } else {
+            return {
+              ...book,
+              status: action.status
+            }
+          }
+        })
+      }
+      console.log(action.status)
     default:
       return state;
   }
