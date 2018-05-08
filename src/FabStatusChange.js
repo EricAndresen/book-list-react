@@ -2,9 +2,10 @@ import React from 'react';
 import {connect} from 'react-redux'
 
 const FabStatusChange = (props) => {
-    
+    const {book} = props
+
     const updateBook = () => {
-        props.dispatch({type: "UPDATE_BOOK"})
+        props.dispatch({type: "UPDATE_BOOK", index: book.index})
     }
 
     return ( 
