@@ -95,7 +95,6 @@ const reducer = (state = initialState, action) => {
           }
         })
       }
-      console.log(action.status)
     default:
       return state;
   }
