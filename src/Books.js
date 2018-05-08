@@ -7,7 +7,7 @@ const Books = (props) => {
 
     const filteredBooks = books.filter( book => book.status === status);
 
-    const names = filteredBooks.map( (book, i) => (
+    const bookList = filteredBooks.map( (book, i) => (
         <div 
             key = {i}
             className = "Books-book">
@@ -20,7 +20,7 @@ const Books = (props) => {
 
     return (
         <div className = "Books-container">
-           {names}
+           {bookList}
         </div>
     )
 }
