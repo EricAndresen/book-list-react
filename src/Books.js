@@ -10,11 +10,11 @@ const FabStatusChange = (props) => (
 )
 
 const Books = (props) => {
-    const {books,dispatch} = props;
+    const {books, status, dispatch} = props;
 
-    
+    const filteredBooks = books.filter( book => book.status === status);
 
-    const names = books.map( (book, i) => (
+    const names = filteredBooks.map( (book, i) => (
         <div 
             key = {i}
             className = "Books-book">
@@ -32,4 +32,5 @@ const Books = (props) => {
     )
 }
 
-export default connect()(Books)
+const mapToProps = (state) => ({books: state.books})
+export default connect(mapToProps)(Books)

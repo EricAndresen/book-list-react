@@ -5,13 +5,12 @@ import { connect } from 'react-redux';
 const BookShelf = (props) => (
     <main>
       <h2>Currently Reading</h2>
-      <Books books = {props.books.filter( book => (book.status === "currently-reading"))}/>
+      <Books status = "currently-reading" />
       <h2>Want to Read</h2>
-      <Books books = {props.books.filter( book => (book.status === "want-to-read"))}/>
+      <Books status = "want-to-read"/>
       <h2>Done Reading</h2>
-      <Books books = {props.books.filter( book => (book.status === "done-reading"))}/>
+      <Books status = "done-reading"/>
     </main>
     )
 
-const mapToProps = (state) => ({ books : state.books })
-export default connect(mapToProps)(BookShelf)
+export default BookShelf
