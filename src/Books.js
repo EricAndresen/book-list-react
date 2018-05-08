@@ -1,16 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-
-const FabStatusChange = (props) => (
-    <button 
-        className = "fab"
-        onClick = {() => console.log(props.book.title)} >
-        <i className="material-icons">keyboard_arrow_down</i>
-    </button>
-)
+import FabStatusChange from './FabStatusChange'
 
 const Books = (props) => {
-    const {books, status, dispatch} = props;
+    const {books, status} = props;
 
     const filteredBooks = books.filter( book => book.status === status);
 

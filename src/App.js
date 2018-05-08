@@ -72,6 +72,8 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
+    case "UPDATE_BOOK":
+      console.log("updated")
     default:
       return state;
   }
