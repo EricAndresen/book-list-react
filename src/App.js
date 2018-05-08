@@ -6,10 +6,13 @@
 
 import React, { Component } from 'react';
 import Header from './Header';
-import Books from './Books';
+import BookShelf from './BookShelf';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
 import './App.css';
 
-const books = [
+const initialState = {
+  books : [
       {
         title: "A farewell to Arms",
         author: "Ernest Hemingway",
@@ -64,28 +67,28 @@ const books = [
         status: "done-reading",
         imgUrl: "https://static1.squarespace.com/static/5202d1b3e4b099a0812c51a3/523753d6e4b030ffaec4a565/5a2043310d9297af42dde909/1512063793878/Dungeon-Lord.jpg"
       },
-  ]
+    ],
+}
 
+const reducer = (state = initialState, action) => {
+  switch (action.type) {
+    default:
+      return state;
+  }
+}
 
-const BookShelf = () => (
-<main>
-  <h2>Currently Reading</h2>
-  {/* This filter will become by book.status */}
-  <Books books = {books.filter( book => (book.status === "currently-reading"))}/>
-  <h2>Want to Read</h2>
-  <Books books = {books.filter( book => (book.status === "want-to-read"))}/>
-  <h2>Done Reading</h2>
-  <Books books = {books.filter( book => (book.status === "done-reading"))}/>
-</main>
-)
+const store = createStore(reducer)
+
 
 const App = () => {
   
   return(
-  <div>
-    <Header />
-    <BookShelf />
-  </div>
+  <Provider store = { store }>
+    <div>
+      <Header />
+      <BookShelf />
+    </div>
+  </Provider>
 )}
 
 export default App;

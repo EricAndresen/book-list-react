@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { connect } from 'react-redux';
 
 const FabStatusChange = (props) => (
     <button 
@@ -9,7 +10,11 @@ const FabStatusChange = (props) => (
 )
 
 const Books = (props) => {
-    const names = props.books.map( (book, i) => (
+    const {books,dispatch} = props;
+
+    
+
+    const names = books.map( (book, i) => (
         <div 
             key = {i}
             className = "Books-book">
@@ -27,4 +32,4 @@ const Books = (props) => {
     )
 }
 
-export default Books
+export default connect()(Books)
