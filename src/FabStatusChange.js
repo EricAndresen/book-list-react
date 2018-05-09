@@ -8,14 +8,14 @@ import './FabStatusChange.css'
 class FabStatusChange extends Component {
     constructor(props) {
         super(props);
-        this.book = this.props.book;
         this.state = {
             isHidden : true
         }
     }
 
+    // i suspect .this is having reference issues
     updateBook (status) {
-        return this.props.dispatch({type: "UPDATE_BOOK", index: this.book.index, status})
+        return this.props.dispatch({type: "UPDATE_BOOK", index: this.props.book.index, status})
     }
 
     showOptions() {

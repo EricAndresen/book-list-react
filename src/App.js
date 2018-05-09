@@ -1,6 +1,5 @@
 // TODO migrate to typescript instead of using proptypes (build time rather than run time checks, and a little nicer with functional reactive)
-// TODO add drop down menu
-// TODO add redux
+// BUG: Something is wierd with selecting the books - index changes depending on where it's moved
 
 // OPTIMIZE remove font CDN for material icons for lighter weight app
 
@@ -83,6 +82,7 @@ const reducer = (state = initialState, action) => {
   switch (action.type) {
     case "UPDATE_BOOK":
       // this will have to change if there is anything but books in the stor
+      console.log(action.index)
       return {
         books: state.books.map( book => {
           if (book.index !== action.index) {
