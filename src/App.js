@@ -1,6 +1,11 @@
 // TODO migrate to typescript instead of using proptypes (build time rather than run time checks, and a little nicer with functional reactive)
-
 // OPTIMIZE remove font CDN for material icons for lighter weight app
+// TODO can remove item from library
+// TODO option is focused by status (make bool evaluation in onfocus attr)
+
+// TODO Make Fab Search
+// TODO On fab search click go to search page /search (react-router)
+// TODO Can search books that are not in library
 
 import React from 'react';
 import Header from './Header';
@@ -100,14 +105,13 @@ const reducer = (state = initialState, action) => {
 const store = createStore(reducer)
 
 
-const App = () => {
-  return(
+const App = () => (
     <Provider store = { store }>
       <div>
         <Header />
         <BookShelf />
       </div>
     </Provider>
-)}
+)
 
 export default App;
