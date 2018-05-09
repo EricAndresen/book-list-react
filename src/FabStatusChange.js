@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import './FabStatusChange.css'
 
 
-// use a class rather than functional component to store presentation state (e.g. showList)
+// class rather than functional component to store presentation state (e.g. showList)
 
 class FabStatusChange extends Component {
     constructor(props) {
@@ -13,7 +13,6 @@ class FabStatusChange extends Component {
         }
     }
 
-    // i suspect .this is having reference issues
     updateBook (status) {
         return this.props.dispatch({type: "UPDATE_BOOK", index: this.props.book.index, status})
     }
@@ -33,7 +32,7 @@ class FabStatusChange extends Component {
     options = (
         <select 
                 className = "status-menu" 
-                size = "3"
+                size = "4"
                 onClick = {(e) => this.updateBook(e.target.value)}
                 >
             <option 
@@ -45,6 +44,9 @@ class FabStatusChange extends Component {
             <option 
                 selected = {this.props.book.status === "currently-reading"} 
                 value ="currently-reading">Currently Reading</option>
+            <option 
+                selected = {this.props.book.status === "none"} 
+                value ="none">Archive</option>
         </select>
     )
 

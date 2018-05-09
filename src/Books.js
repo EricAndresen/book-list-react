@@ -26,6 +26,7 @@ const Books = (props) => {
             <h4>{book.title}</h4>
             <h5>{book.author}</h5>
             <FabStatusChange book = {book}/>
+            <p>{book.status}</p>
         </div>
     ))
 

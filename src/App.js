@@ -1,8 +1,8 @@
 // TODO migrate to typescript instead of using proptypes (build time rather than run time checks, and a little nicer with functional reactive)
 // OPTIMIZE remove font CDN for material icons for lighter weight app
 
-// TODO can remove item from library (none option)
 // TODO Add books not in library to showcase search feature
+// TODO can remove item from library (none option)
 
 // BUG select options is below adjacent elements
 
@@ -80,6 +80,34 @@ const initialState = {
         author: "George Orwell",
         status: "done-reading",
         imgUrl: "http://wwwcdn.printmag.com/wp-content/uploads/1984-book-covers-2.jpg",
+      },
+      {
+        index: 9,
+        title: "Fred the Lonely Monster",
+        author: "Anne Lowinsky",
+        status: "none",
+        imgUrl: "https://about.canva.com/wp-content/uploads/sites/3/2015/01/children_bookcover.png"
+      },
+      {
+        index: 10,
+        title: "The Vegetarian",
+        author: "Han Kang",
+        status: "none",
+        imgUrl: "https://cdn.pastemagazine.com/www/system/images/photo_albums/30-best-book-covers-2016/large/2vegetariancover.png?1384968217",
+      },
+      {
+        index: 11,
+        title: "Pride and Prejudice",
+        author: "Jane Austin",
+        status: "none",
+        imgUrl: "http://digitalausten.org/sites/default/files/media/image/2017-10/Norton%202%20Edition%20Front.jpg",
+      },
+      {
+        index: 12,
+        title: "Harry Potter and the Order of the Phoenix",
+        author: "George Orwell",
+        status: "none",
+        imgUrl: "http://cdn01.cdn.justjaredjr.com/wp-content/uploads/2013/07/hp-covers/new-harry-potter-book-covers-05.jpg"
       },
     ],
 }
