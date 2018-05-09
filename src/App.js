@@ -1,8 +1,7 @@
 // TODO migrate to typescript instead of using proptypes (build time rather than run time checks, and a little nicer with functional reactive)
 // OPTIMIZE remove font CDN for material icons for lighter weight app
 
-// TODO Add books not in library to showcase search feature
-// TODO 
+// TODO Refactor Book and fab button for each page - what info needs to be passed to it?
 
 // BUG select options is below adjacent elements
 

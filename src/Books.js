@@ -13,9 +13,7 @@ const Books = (props) => {
     
     if (typeof searchString !== 'undefined') {
         filteredBooks = books.filter( book => (book.title.includes(searchString) || book.author.includes(searchString)));
-    } else {
-        console.log('no parameteres passed to Books component')
-    }
+    } 
 
 
     const bookList = filteredBooks.map( (book, i) => (
@@ -30,7 +28,7 @@ const Books = (props) => {
     ))
 
     return (
-        // If there is status, then layout is horizontal - proxy for bookshelf display (is there a better way?)
+        // If there is status, then layout is horizontal - proxy for bookshelf display (is there a better way? - just have a prop for type?)
         <div className = { status ? "flex" : "grid"}>
            {bookList}
         </div>
