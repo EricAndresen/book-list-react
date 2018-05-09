@@ -20,7 +20,7 @@ const Books = (props) => {
         <div 
             key = {i}
             className = "Books-book">
-            <img height = "200px" src = {book.imgUrl} />
+            <img alt = {`cover for ${book.title}`} height = "200px" src = {book.imgUrl} />
             <h4>{book.title}</h4>
             <h5>{book.author}</h5>
             <FabStatusChange book = {book}/>
