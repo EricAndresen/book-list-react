@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
+import Books from './Books'
 
 class AddBook extends Component {
     constructor() {
@@ -20,12 +20,11 @@ class AddBook extends Component {
                     this.setState({searchString: event.target.value})}
                 }>
             </input>
-            <div></div>
+            <Books searchString = {this.state.searchString}/>
         </div>
         )
     }
 }
 
-const mapStateToProps = (state => ({books: state.books}))
 
-export default connect(mapStateToProps)(AddBook)
+export default AddBook

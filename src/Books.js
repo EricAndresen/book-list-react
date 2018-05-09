@@ -3,9 +3,20 @@ import { connect } from 'react-redux';
 import FabStatusChange from './FabStatusChange'
 
 const Books = (props) => {
-    const {books, status} = props;
+    const {books, status, searchString} = props;
 
-    const filteredBooks = books.filter( book => book.status === status);
+    let filteredBooks = []
+
+    if (typeof status !== 'undefined' ){
+        filteredBooks = books.filter( book => book.status === status);
+    } 
+    
+    if (typeof searchString !== 'undefined') {
+        filteredBooks = books.filter( book => (book.title.includes(searchString) || book.author.includes(searchString)));
+    } else {
+        console.log('no parameteres passed to Books component')
+    }
+
 
     const bookList = filteredBooks.map( (book, i) => (
         <div 
