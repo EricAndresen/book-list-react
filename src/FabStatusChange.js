@@ -32,7 +32,8 @@ class FabStatusChange extends Component {
 
     options = (
         <select 
-                id = "status-menu" size = "3"
+                className = "status-menu" 
+                size = "3"
                 onClick = {(e) => this.updateBook(e.target.value)}
                 >
             <option value ="done-reading">Done Reading</option>

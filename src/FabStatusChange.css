@@ -8,6 +8,10 @@
     width: 35px;
   }
 
+.status-menu {
+    z-index: 100;
+}
+
 .hide {
     display: none;
 }

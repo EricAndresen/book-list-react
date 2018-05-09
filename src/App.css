@@ -13,8 +13,6 @@ main {
   margin: auto;
 }
 
-
-
 button:focus {
   outline:0;
 }
@@ -28,14 +26,18 @@ input:focus {
   padding: 0 10px;
 }
 
+image {
+  z-index: -1;
+}
 
 .Books-book {
   margin: 0 30px;
+  position: relative;
 }
 
 .Books-book > div {
-  position: relative;
-  bottom: 150px;
+  position: absolute;
+  top: 150px;
   left: 110px;
 }
 
