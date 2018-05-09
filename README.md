@@ -1,6 +1,6 @@
 # Book List App (in progress)
 
-This is a simple book list app based on the following spec.
+This is a simple book list app based on the following spec, and [these requirements](https://review.udacity.com/#!/rubrics/918/view)
 
 ![Rows of books organized by whether they have been read or not](https://d17h27t6h515a5.cloudfront.net/topher/2017/July/595d48a9_correct-use-of-state/correct-use-of-state.gif)
 
