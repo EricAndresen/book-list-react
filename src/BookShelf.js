@@ -1,6 +1,5 @@
 import React from 'react';
 import Books from './Books';
-import { connect } from 'react-redux';
 
 const BookShelf = (props) => (
     <main>

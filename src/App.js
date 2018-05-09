@@ -1,9 +1,8 @@
 // TODO migrate to typescript instead of using proptypes (build time rather than run time checks, and a little nicer with functional reactive)
-// BUG: Something is wierd with selecting the books - index changes depending on where it's moved
 
 // OPTIMIZE remove font CDN for material icons for lighter weight app
 
-import React, { Component } from 'react';
+import React from 'react';
 import Header from './Header';
 import BookShelf from './BookShelf';
 import { Provider } from 'react-redux';
@@ -81,8 +80,6 @@ const initialState = {
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case "UPDATE_BOOK":
-      // this will have to change if there is anything but books in the stor
-      console.log(action.index)
       return {
         books: state.books.map( book => {
           if (book.index !== action.index) {
@@ -104,14 +101,13 @@ const store = createStore(reducer)
 
 
 const App = () => {
-  
   return(
-  <Provider store = { store }>
-    <div>
-      <Header />
-      <BookShelf />
-    </div>
-  </Provider>
+    <Provider store = { store }>
+      <div>
+        <Header />
+        <BookShelf />
+      </div>
+    </Provider>
 )}
 
 export default App;
