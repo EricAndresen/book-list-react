@@ -14,6 +14,9 @@ class AddBook extends Component {
         return (
         <div>
             <div className = "AddBook-search-bar">
+                <Link to = "/">
+                    <i className ="material-icons grey icon-large">arrow_back</i>
+                </Link>
                 <i className ="material-icons grey icon-large">search</i>
                 <input 
                     className = "AddBook-input"
