@@ -1,4 +1,3 @@
-
 header {
   background-color: indigo;
   color: white;
@@ -13,6 +12,8 @@ main {
   max-width: 1000px;
   margin: auto;
 }
+
+
 
 button:focus {
   outline:0;
@@ -38,7 +39,7 @@ input:focus {
   left: 110px;
 }
 
-.Books-container {
+.flex {
   display: flex;
   overflow-x: auto;
 }
@@ -49,7 +50,7 @@ input:focus {
   display: flex;
   align-items: center;
   max-width: 500px;
-  margin: 15px auto;
+  margin: 30px auto 50px;
 }
 
 .AddBook-input {
@@ -63,6 +64,11 @@ input:focus {
 
 .grey {
   color: grey
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 

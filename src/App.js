@@ -4,7 +4,6 @@
 // TODO Add books not in library to showcase search feature
 // TODO select option is focused by status (make bool evaluation in onfocus attr)
 
-// TODO Add back button to /add
 // BUG Fab changes position based on height of book element in Books.js
 // TODO Grid View / add
 
@@ -112,8 +111,10 @@ const App = () => (
     <Provider store = { store }>
       <div>
         <Header />
-        <Route exact path="/" component = {BookShelf} />
-        <Route exact path="/add" component = {AddBook} />
+        <main>
+          <Route exact path="/" component = {BookShelf} />
+          <Route exact path="/add" component = {AddBook} />
+        </main>
       </div>
     </Provider>
 )

@@ -14,7 +14,7 @@ const FabSearch = () => (
 );
 
 const BookShelf = (props) => (
-    <main>
+    <div>
       <h2>Currently Reading</h2>
       <Books status = "currently-reading" />
       <h2>Want to Read</h2>
@@ -22,7 +22,7 @@ const BookShelf = (props) => (
       <h2>Done Reading</h2>
       <Books status = "done-reading"/>
       <FabSearch />
-    </main>
+    </div>
     )
 
 export default BookShelf

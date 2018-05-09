@@ -30,7 +30,8 @@ const Books = (props) => {
     ))
 
     return (
-        <div className = "Books-container">
+        // If there is status, then layout is horizontal - proxy for bookshelf display (is there a better way?)
+        <div className = { status ? "flex" : "grid"}>
            {bookList}
         </div>
     )
