@@ -2,7 +2,7 @@
 // OPTIMIZE remove font CDN for material icons for lighter weight app
 
 // TODO Add books not in library to showcase search feature
-// TODO can remove item from library (none option)
+// TODO 
 
 // BUG select options is below adjacent elements
 

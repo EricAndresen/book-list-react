@@ -34,18 +34,15 @@ class FabStatusChange extends Component {
                 className = "status-menu" 
                 size = "4"
                 onClick = {(e) => this.updateBook(e.target.value)}
+                defaultValue = {this.props.book.status}
                 >
             <option 
-                selected = {this.props.book.status === "done-reading"} 
                 value ="done-reading">Done Reading</option>
             <option 
-                selected = {this.props.book.status === "want-to-read"} 
                 value ="want-to-read">Want to Read</option>
             <option 
-                selected = {this.props.book.status === "currently-reading"} 
                 value ="currently-reading">Currently Reading</option>
             <option 
-                selected = {this.props.book.status === "none"} 
                 value ="none">Archive</option>
         </select>
     )
