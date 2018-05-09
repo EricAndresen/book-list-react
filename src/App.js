@@ -3,7 +3,6 @@
 
 // TODO can remove item from library (none option)
 // TODO Add books not in library to showcase search feature
-// TODO select option is focused by status (make bool evaluation in onfocus attr)
 
 // BUG select options is below adjacent elements
 
