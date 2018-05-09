@@ -3,7 +3,6 @@
 // TODO can remove item from library
 // TODO option is focused by status (make bool evaluation in onfocus attr)
 
-// TODO Make Fab Search
 // TODO On fab search click go to search page /search (react-router)
 // TODO Can search books that are not in library
 
@@ -12,6 +11,7 @@ import Header from './Header';
 import BookShelf from './BookShelf';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
+import { Route } from 'react-router-dom';
 import './App.css';
 
 const initialState = {
@@ -104,12 +104,14 @@ const reducer = (state = initialState, action) => {
 
 const store = createStore(reducer)
 
+const AddBook = () => <div>Add a book!</div>
 
 const App = () => (
     <Provider store = { store }>
       <div>
         <Header />
-        <BookShelf />
+        <Route exact path="/" component = {BookShelf} />
+        <Route exact path="/add" component = {AddBook} />
       </div>
     </Provider>
 )

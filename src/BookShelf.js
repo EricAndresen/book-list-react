@@ -1,9 +1,16 @@
 import React from 'react';
 import Books from './Books';
-import './BookShelf.css'
+import { Link } from 'react-router-dom';
+import './BookShelf.css';
 
 const FabSearch = () => (
-  <button className = "fab-large primary lower-right"><i className="material-icons" >add</i></button>
+  <Link to="/add">
+    <button className = "fab-large primary lower-right">
+        <i className="material-icons" >
+          add
+        </i>
+    </button>
+  </Link>
 );
 
 const BookShelf = (props) => (
