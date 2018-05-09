@@ -3,12 +3,13 @@
 // TODO can remove item from library
 // TODO option is focused by status (make bool evaluation in onfocus attr)
 
-// TODO On fab search click go to search page /search (react-router)
 // TODO Can search books that are not in library
+//  Try input store state in component, on change change that state and filter to those that .includes string in title or author
 
 import React from 'react';
 import Header from './Header';
 import BookShelf from './BookShelf';
+import AddBook from './AddBook';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import { Route } from 'react-router-dom';
@@ -103,8 +104,6 @@ const reducer = (state = initialState, action) => {
 }
 
 const store = createStore(reducer)
-
-const AddBook = () => <div>Add a book!</div>
 
 const App = () => (
     <Provider store = { store }>
