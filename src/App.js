@@ -104,9 +104,51 @@ const initialState = {
       {
         index: 12,
         title: "Harry Potter and the Order of the Phoenix",
-        author: "George Orwell",
+        author: "J.K. Rowling",
         status: "none",
         imgUrl: "http://cdn01.cdn.justjaredjr.com/wp-content/uploads/2013/07/hp-covers/new-harry-potter-book-covers-05.jpg"
+      },
+      {
+        index: 13,
+        title: "American Pyscho",
+        author: "Bret Easton Ellis",
+        status: "none",
+        imgUrl: "https://shortlist.imgix.net/app/uploads/2012/06/24225129/the-50-coolest-book-covers-5.jpg?w=1200&h=1&fit=max&auto=format%2Ccompress"
+      },
+      {
+        index: 14,
+        title: "Hajit Murat",
+        author: "Leo Tolstoy",
+        status: "none",
+        imgUrl: "http://1.bp.blogspot.com/-ww3RXKXqd0g/UUDpegddlKI/AAAAAAAAJj4/PbCYey5Xh-I/s1600/hadji+murat.jpg"
+      },
+      {
+        index: 15,
+        title: "The Hobbit",
+        author: "J.R.R Tolkien",
+        status: "none",
+        imgUrl: "http://nerdalicious.com.au/wp-content/uploads/2013/09/Hobbit-Ballantine-1989.jpg"
+      },
+      {
+        index: 16,
+        title: "Bloatef JabbaScript Frameworks",
+        author: "Pete Hunt",
+        status: "none",
+        imgUrl: "https://boyter.org/static/books/ChnulxvW0AEUs1J.jpg-large.jpg"
+      },
+      {
+        index: 17,
+        title: "Shatner Quake",
+        author: "William Shatner",
+        status: "none",
+        imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJJEVcYM9H3SJLM5sN5La2HMravsi0t-9XVV_nw0w7v1Ssj46y"
+      },
+      {
+        index: 18,
+        title: "Harry Potter and the Sorcerers Stone",
+        author: "J.K. Rowling",
+        status: "none",
+        imgUrl: "https://ewedit.files.wordpress.com/2016/09/hpsorcstone.jpg"
       },
     ],
 }
