@@ -13,13 +13,17 @@ class AddBook extends Component {
     render() {
         return (
         <div>
-            <input 
-                type="text"
-                value = {this.state.searchString}
-                onChange = {event => {
-                    this.setState({searchString: event.target.value})}
-                }>
-            </input>
+            <div className = "AddBook-search-bar">
+                <i className ="material-icons grey icon-large">search</i>
+                <input 
+                    className = "AddBook-input"
+                    type="text"
+                    value = {this.state.searchString}
+                    onChange = {event => {
+                        this.setState({searchString: event.target.value})}
+                    }>
+                </input>
+            </div>
             <Books searchString = {this.state.searchString}/>
         </div>
         )

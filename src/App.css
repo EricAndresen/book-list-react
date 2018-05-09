@@ -14,6 +14,19 @@ main {
   margin: auto;
 }
 
+button:focus {
+  outline:0;
+}
+
+input:focus {
+  outline: 0;
+}
+
+.icon-large {
+  font-size: 30px;
+}
+
+
 .Books-book {
   margin: 0 30px;
 }
@@ -29,7 +42,27 @@ main {
   overflow-x: auto;
 }
 
+.AddBook-search-bar {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  max-width: 500px;
+  margin: 15px auto;
+}
 
+.AddBook-input {
+  width:100%;
+  border: none;
+  border-bottom: grey solid 1px;
+  margin: 0 20px;
+  padding: 5px;
+  font-size: 20px;
+}
+
+.grey {
+  color: grey
+}
 
 
 

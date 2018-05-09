@@ -1,7 +1,13 @@
 // TODO migrate to typescript instead of using proptypes (build time rather than run time checks, and a little nicer with functional reactive)
 // OPTIMIZE remove font CDN for material icons for lighter weight app
-// TODO can remove item from library
-// TODO option is focused by status (make bool evaluation in onfocus attr)
+// TODO can remove item from library (none option)
+// TODO Add books not in library to showcase search feature
+// TODO select option is focused by status (make bool evaluation in onfocus attr)
+
+// TODO Add back button to /add
+// BUG Fab changes position based on height of book element in Books.js
+// TODO Grid View / add
+
 
 import React from 'react';
 import Header from './Header';
