@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Books from './Books'
 
+// make search string an array of words, filter for each of those and append those to a list, then return that list
+
 class AddBook extends Component {
     constructor() {
         super()

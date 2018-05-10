@@ -1,6 +1,8 @@
 // TODO migrate to typescript instead of using proptypes (build time rather than run time checks, and a little nicer with functional reactive)
 // BUG select options is below adjacent elements
 
+// Requirement The user is able to search for multiple words, such as “artificial intelligence
+
 import React from 'react';
 import Header from './Header';
 import BookShelf from './BookShelf';

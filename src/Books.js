@@ -7,13 +7,26 @@ const Books = (props) => {
 
     let filteredBooks = []
 
+    // check string contains more than one search term
+    const containsAll = (targetList, stringToCheck, index = targetList.length) => {
+        let containsEach = true;
+
+        if (index <= 0) {
+            return containsEach
+        } else {
+            index = index - 1;
+            containsEach = stringToCheck.includes(targetList[index]) && containsAll(targetList, stringToCheck, index);
+            return containsEach
+        }
+    }
+
     if (typeof status !== 'undefined' ){
         filteredBooks = books.filter( book => book.status === status);
     } 
     
-    
     if (searchString) {
-        filteredBooks = books.filter( book => (book.title.includes(searchString) || book.author.includes(searchString)));
+        const searchStringList = searchString.trim().split(' ');
+        filteredBooks = books.filter( book => (containsAll(searchStringList, book.title) || containsAll(searchStringList, book.author)))
     }
 
 
