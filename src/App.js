@@ -1,19 +1,23 @@
 // TODO migrate to typescript instead of using proptypes (build time rather than run time checks, and a little nicer with functional reactive)
-// OPTIMIZE remove font CDN for material icons for lighter weight app
-
 // TODO Refactor Book and fab button for each page - what info needs to be passed to it?
+// OPTIMIZE remove font CDN for material icons for lighter weight app
 
 // BUG select options is below adjacent elements
 
+// REQUIREMENT persist data between sessions (web worker?/ local storage?)
+// REQUIREMENT search results are not shown when all of the text is deleted
 
 import React from 'react';
 import Header from './Header';
 import BookShelf from './BookShelf';
 import AddBook from './AddBook';
+import { loadState, saveState } from './localStorage'
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import { Route } from 'react-router-dom';
 import './App.css';
+
+const persistedState = loadState()
 
 const initialState = {
   books : [
@@ -173,7 +177,10 @@ const reducer = (state = initialState, action) => {
   }
 }
 
-const store = createStore(reducer)
+const store = createStore(reducer, persistedState)
+store.subscribe(() => {
+  saveState(store.getState());
+});
 
 const App = () => (
     <Provider store = { store }>
