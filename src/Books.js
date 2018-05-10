@@ -11,9 +11,11 @@ const Books = (props) => {
         filteredBooks = books.filter( book => book.status === status);
     } 
     
-    if (typeof searchString !== 'undefined') {
+    if (searchString) {
         filteredBooks = books.filter( book => (book.title.includes(searchString) || book.author.includes(searchString)));
-    } 
+    } else {
+        filteredBooks = []
+    }
 
 
     const bookList = filteredBooks.map( (book, i) => (

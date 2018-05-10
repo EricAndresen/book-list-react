@@ -13,6 +13,7 @@ export const loadState = () => {
   
 export const saveState = (state) => {
     try {
+      // TODO reduce overhead with lodash (if make add book feature)
       const serializedState = JSON.stringify(state);
       localStorage.setItem('state', serializedState);
     } catch (err) {

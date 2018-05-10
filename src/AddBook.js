@@ -20,6 +20,7 @@ class AddBook extends Component {
                 <i className ="material-icons grey icon-large">search</i>
                 <input 
                     className = "AddBook-input"
+                    placeholder = "Type to See Available Books"
                     type="text"
                     value = {this.state.searchString}
                     onChange = {event => {

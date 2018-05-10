@@ -1,10 +1,6 @@
 // TODO migrate to typescript instead of using proptypes (build time rather than run time checks, and a little nicer with functional reactive)
-// TODO Refactor Book and fab button for each page - what info needs to be passed to it?
-// OPTIMIZE remove font CDN for material icons for lighter weight app
-
 // BUG select options is below adjacent elements
 
-// REQUIREMENT persist data between sessions (web worker?/ local storage?)
 // REQUIREMENT search results are not shown when all of the text is deleted
 
 import React from 'react';
