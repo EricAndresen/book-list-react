@@ -11,10 +11,9 @@ const Books = (props) => {
         filteredBooks = books.filter( book => book.status === status);
     } 
     
+    
     if (searchString) {
         filteredBooks = books.filter( book => (book.title.includes(searchString) || book.author.includes(searchString)));
-    } else {
-        filteredBooks = []
     }
 
 
