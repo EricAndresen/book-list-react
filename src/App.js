@@ -1,6 +1,5 @@
 // TODO migrate to typescript instead of using proptypes (build time rather than run time checks, and a little nicer with functional reactive)
 // BUG select options is below adjacent elements
-// BUG BookShelf Doesn't disaply books
 
 import React from 'react';
 import Header from './Header';
