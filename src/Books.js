@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import FabStatusChange from './FabStatusChange'
 
 const Books = (props) => {
-    const {books, status, searchString} = props;
+    const {state, status, searchString} = props;
 
     let filteredBooks = []
 
@@ -21,12 +21,12 @@ const Books = (props) => {
     }
 
     if (typeof status !== 'undefined' ){
-        filteredBooks = books.filter( book => book.status === status);
+        filteredBooks = state.books.filter( book => book.status === status);
     } 
     
     if (searchString) {
         const searchStringList = searchString.trim().split(' ');
-        filteredBooks = books.filter( book => (containsAll(searchStringList, book.title) || containsAll(searchStringList, book.author)))
+        filteredBooks = state.books.filter( book => (containsAll(searchStringList, book.title) || containsAll(searchStringList, book.author)))
     }
 
 
@@ -37,7 +37,7 @@ const Books = (props) => {
             <img alt = {`cover for ${book.title}`} height = "200px" src = {book.imgUrl} />
             <h4>{book.title}</h4>
             <h5>{book.author}</h5>
-            <FabStatusChange book = {book}/>
+            {/* <FabStatusChange book = {book}/> */}
         </div>
     ))
 
@@ -49,5 +49,4 @@ const Books = (props) => {
     )
 }
 
-const mapToProps = (state) => ({books: state.books})
-export default connect(mapToProps)(Books)
+export default Books

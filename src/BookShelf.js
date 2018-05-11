@@ -16,11 +16,11 @@ const FabSearch = () => (
 const BookShelf = (props) => (
     <div>
       <h2>Currently Reading</h2>
-      <Books status = "currently-reading" />
+      <Books state = {props.state} status = "currently-reading" />
       <h2>Want to Read</h2>
-      <Books status = "want-to-read"/>
+      <Books state = {props.state} status = "want-to-read"/>
       <h2>Done Reading</h2>
-      <Books status = "done-reading"/>
+      <Books state = {props.state} status = "done-reading"/>
       <FabSearch />
     </div>
     )

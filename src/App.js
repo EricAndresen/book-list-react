@@ -3,10 +3,9 @@
 // TODO search terms automatically in lowercase
 
 // TODO refactor to not use redux
-  // set this.state to persisted State && initial state
-    // i.e. when the app is initialized if persisted data exists set it to that, otherwise set it to initial state
   // Make alter state that uses setState() - alterBooks(index, objToModify) where objToModify is {status: 'new-status'} 
-    // need to refactor saveData to trigger on data modificaiton (imperative)
+  // pass alter function down through functions
+  // need to refactor saveData to trigger on data modificaiton (imperative)
   
 
 
@@ -15,7 +14,6 @@ import Header from './Header';
 import BookShelf from './BookShelf';
 import AddBook from './AddBook';
 import { loadState, saveState } from './localStorage'
-import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import { Route } from 'react-router-dom';
 import './App.css';
@@ -186,17 +184,38 @@ store.subscribe(() => {
 });
 
 class App extends Component {
+  constructor() {
+    super()
+    this.state = persistedState || initialState
+  }
+
+  alterBook = (index, status) => {
+    // returns new state
+
+    const books = this.state.books
+    const newBooks = books.map( book => {
+      if (book.index === index) {
+        return {
+          ...book,
+          status
+        }
+      } else {
+        return book
+      }
+    })
+    this.setState({books: newBooks})
+  }
+
   render() {
+
     return (
-      <Provider store = { store }>
         <div>
           <Header />
           <main>
-            <Route exact path="/" component = {BookShelf} />
-            <Route exact path="/add" component = {AddBook} />
+            <Route exact path="/" render = { () => <BookShelf state = {this.state}/>} />
+            <Route exact path="/add" render = { () => <AddBook state = {this.state}/>}/>
           </main>
         </div>
-      </Provider>
     )
   }
 }
