@@ -1,4 +1,4 @@
-# Book List App (in progress)
+# Book List App
 
 This is a simple book list app based on the following spec, and [these requirements](https://review.udacity.com/#!/rubrics/918/view)
 
@@ -6,7 +6,7 @@ This is a simple book list app based on the following spec, and [these requireme
 
 This is an assignment for my Udacity Front End Nano-degree. I chose to start from scratch building with React + Redux rather than use the template code usually provided. 
 
-_Update: This project was originally rejected for using Redux. So I moved the Redux version into the `redux` branch and refactored to pass state down through components._
+_Update: This project was originally rejected for using Redux. So I moved the old version into the `redux` branch and refactored to pass state down through components._
 
 ## Instructions
 
