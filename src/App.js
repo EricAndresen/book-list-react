@@ -1,11 +1,16 @@
 // TODO migrate to typescript instead of using proptypes (build time rather than run time checks, and a little nicer with functional reactive)
 // BUG select options is below adjacent elements
 // TODO search terms automatically in lowercase
+
 // TODO refactor to not use redux
+  // set this.state to persisted State && initial state
+    // i.e. when the app is initialized if persisted data exists set it to that, otherwise set it to initial state
+  // Make alter state that uses setState() - alterBooks(index, objToModify) where objToModify is {status: 'new-status'} 
+    // need to refactor saveData to trigger on data modificaiton (imperative)
+  
 
-// Change
 
-import React from 'react';
+import React, {Component} from 'react';
 import Header from './Header';
 import BookShelf from './BookShelf';
 import AddBook from './AddBook';
@@ -180,16 +185,20 @@ store.subscribe(() => {
   saveState(store.getState());
 });
 
-const App = () => (
-    <Provider store = { store }>
-      <div>
-        <Header />
-        <main>
-          <Route exact path="/" component = {BookShelf} />
-          <Route exact path="/add" component = {AddBook} />
-        </main>
-      </div>
-    </Provider>
-)
+class App extends Component {
+  render() {
+    return (
+      <Provider store = { store }>
+        <div>
+          <Header />
+          <main>
+            <Route exact path="/" component = {BookShelf} />
+            <Route exact path="/add" component = {AddBook} />
+          </main>
+        </div>
+      </Provider>
+    )
+  }
+}
 
 export default App;
