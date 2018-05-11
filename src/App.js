@@ -1,7 +1,9 @@
 // TODO migrate to typescript instead of using proptypes (build time rather than run time checks, and a little nicer with functional reactive)
 // BUG select options is below adjacent elements
+// TODO search terms automatically in lowercase
+// TODO refactor to not use redux
 
-// Requirement The user is able to search for multiple words, such as “artificial intelligence
+// Change
 
 import React from 'react';
 import Header from './Header';
