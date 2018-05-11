@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {connect} from 'react-redux'
 import './FabStatusChange.css'
 
 
@@ -15,8 +14,9 @@ class FabStatusChange extends Component {
 
     updateBook (status) {
         return this.props.alterBook(this.props.book.index, status)
-        // console.log(typeof this.props.alterBook)
     }
+
+
 
     showOptions() {
         this.setState({

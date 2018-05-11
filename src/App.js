@@ -2,18 +2,12 @@
 // BUG select options is below adjacent elements
 // TODO search terms automatically in lowercase
 
-// TODO refactor to not use redux
-  // pass alter function down through functions
-  // need to refactor saveData to trigger on data modificaiton (imperative)
-  
-
 
 import React, {Component} from 'react';
 import Header from './Header';
 import BookShelf from './BookShelf';
 import AddBook from './AddBook';
 import { loadState, saveState } from './localStorage'
-import { createStore } from 'redux';
 import { Route } from 'react-router-dom';
 import './App.css';
 
@@ -157,10 +151,6 @@ const initialState = {
     ],
 }
 
-// store.subscribe(() => {
-//   saveState(store.getState());
-// });
-
 class App extends Component {
   constructor() {
     super()
@@ -181,7 +171,8 @@ class App extends Component {
         return book
       }
     })
-    this.setState({books: newBooks})
+    this.setState({books: newBooks});
+    saveState({books: newBooks});
   }
 
   render() {
