@@ -3,7 +3,6 @@
 // TODO search terms automatically in lowercase
 
 // TODO refactor to not use redux
-  // Make alter state that uses setState() - alterBooks(index, objToModify) where objToModify is {status: 'new-status'} 
   // pass alter function down through functions
   // need to refactor saveData to trigger on data modificaiton (imperative)
   
@@ -158,30 +157,9 @@ const initialState = {
     ],
 }
 
-const reducer = (state = initialState, action) => {
-  switch (action.type) {
-    case "UPDATE_BOOK":
-      return {
-        books: state.books.map( book => {
-          if (book.index !== action.index) {
-            return book
-          } else {
-            return {
-              ...book,
-              status: action.status
-            }
-          }
-        })
-      }
-    default:
-      return state;
-  }
-}
-
-const store = createStore(reducer, persistedState)
-store.subscribe(() => {
-  saveState(store.getState());
-});
+// store.subscribe(() => {
+//   saveState(store.getState());
+// });
 
 class App extends Component {
   constructor() {
@@ -212,8 +190,8 @@ class App extends Component {
         <div>
           <Header />
           <main>
-            <Route exact path="/" render = { () => <BookShelf state = {this.state}/>} />
-            <Route exact path="/add" render = { () => <AddBook state = {this.state}/>}/>
+            <Route exact path="/" render = { () => <BookShelf alterBook = {this.alterBook} state = {this.state}/>} />
+            <Route exact path="/add" render = { () => <AddBook alterBook = {this.alterBook} state = {this.state}/>}/>
           </main>
         </div>
     )

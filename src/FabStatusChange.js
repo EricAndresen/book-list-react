@@ -14,7 +14,8 @@ class FabStatusChange extends Component {
     }
 
     updateBook (status) {
-        return this.props.dispatch({type: "UPDATE_BOOK", index: this.props.book.index, status})
+        return this.props.alterBook(this.props.book.index, status)
+        // console.log(typeof this.props.alterBook)
     }
 
     showOptions() {
@@ -63,4 +64,4 @@ class FabStatusChange extends Component {
     }
 }
 
-export default connect()(FabStatusChange)
+export default FabStatusChange

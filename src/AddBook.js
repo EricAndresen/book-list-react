@@ -30,7 +30,7 @@ class AddBook extends Component {
                     }>
                 </input>
             </div>
-            <Books state = {this.props.state} searchString = {this.state.searchString}/>
+            <Books alterBook = {this.props.alterBook} state = {this.props.state} searchString = {this.state.searchString}/>
         </div>
         )
     }
